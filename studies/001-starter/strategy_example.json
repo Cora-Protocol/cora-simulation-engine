@@ -1,0 +1,51 @@
+{
+  "utilization_parameter": 0.7,
+  "loan_size_dist": {
+    "type": "dist",
+    "name": "truncated_lognormal",
+    "params": {
+      "lower": 1000,
+      "upper": 100000,
+      "mean": 3.5,
+      "std": 7,
+      "base": 10
+    }
+  },
+  "loan_start_dist": {
+    "type": "dist",
+    "name": "uniform",
+    "params": {
+      "lower": 0,
+      "upper": 1
+    }
+  },
+  "loan_duration_dist": {
+    "type": "dist",
+    "name": "parabolic",
+    "params": {
+      "lower": 0,
+      "upper": 1
+    }
+  },
+  "ltv_dist": {
+    "type": "dist",
+    "name": "truncated_normal",
+    "params": {
+      "lower": 0.01,
+      "upper": 0.99,
+      "mean": 0.5,
+      "std": 1.11
+    }
+  },
+  "max_ltv": 0.4,
+  "max_liquidity": 10000000,
+  "initial_lending_amount": 10000000,
+  "genesis_period_seconds": 86400,
+  "running_period_seconds": 2592000,
+  "fee_model": "black_scholes",
+  "fee_model_update_params": {
+    "lookback_days": 365,
+    "volatility_factor": 1.0
+  },
+  "fee_model_update_interval_seconds": 86400
+}

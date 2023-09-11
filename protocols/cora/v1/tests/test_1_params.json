@@ -1,0 +1,40 @@
+{
+  "utilization_parameter": 0.5,
+  "loan_size_dist": {
+    "type": "dist",
+    "name": "uniform",
+    "params": {
+      "lower": 0,
+      "upper": 100
+    }
+  },
+  "loan_start_dist": {
+    "type": "dist",
+    "name": "uniform",
+    "params": {}
+  },
+  "loan_duration_dist": {
+    "type": "dist",
+    "name": "uniform",
+    "params": {}
+  },
+  "ltv_dist": {
+    "type": "dist",
+    "name": "uniform",
+    "params": {
+      "lower": 0.2,
+      "upper": 0.8
+    }
+  },
+  "max_ltv": 0.9,
+  "max_liquidity": 1000000,
+  "initial_lending_amount": 10000,
+  "genesis_period_seconds": 604800,
+  "running_period_seconds": 2592000,
+  "fee_model": "black_scholes",
+  "fee_model_update_params": {
+    "lookback_days": 365,
+    "volatility_factor": 1.0
+  },
+  "fee_model_update_interval_seconds": 86400
+}
